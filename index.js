@@ -61,4 +61,12 @@ app.get('/fruits/:name', (request, response) => {
   }
 });
 
+app.get('/bananas', (request, response) => {
+  // data contains an array of elements, each representing 1 user
+  const data = {
+    users: [{ name: 'kai' }, { name: 'jim' }, { name: 'susan' }],
+  };
+  response.render('index', data);
+});
+
 app.listen(PORT);
